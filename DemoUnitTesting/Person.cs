@@ -21,17 +21,13 @@ namespace DemoUnitTesting
                 {
                     return $"{FirstName} {LastName}";
                 }
-
-                return string.Empty;
+                return $"{FirstName} {Middlename} {LastName}";
             }
         }
 
         public int Age
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
+            get { return DateTime.Today.Year - BirthDate.Year; }
         }
     }
 }
